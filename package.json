@@ -1,6 +1,6 @@
 {
   "name": "basic-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Cypress plugin for reporting test results and combining JSON files",
   "main": "dist/index.js",
   "scripts": {
