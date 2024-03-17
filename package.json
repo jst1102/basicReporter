@@ -1,0 +1,31 @@
+{
+  "name": "basic-reporter",
+  "version": "1.0.0",
+  "description": "A Cypress plugin for reporting test results and combining JSON files",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --copy-files",
+    "test": "mocha --require @babel/register test/**/*.spec.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "cypress",
+    "reporter",
+    "json"
+  ],
+  "author": "Jonathan Thomas",
+  "license": "MIT",
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.21.0",
+    "mocha": "^10.2.0"
+  }
+}
