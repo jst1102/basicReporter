@@ -24,7 +24,8 @@ Cypress.on("test:after:run", reporter.reportTestResults);
 
 The reportTestResults function will generate a JSON file for each test result in the ./reports directory.
 
-Combining JSON Files
+### Combining JSON Files
+
 To combine multiple JSON files into a single file, import the jsonCombiner module:
 
 ```javascript
@@ -51,14 +52,18 @@ Cypress.on("test:after:run", (results, config) => {
 1. **reportDir:** The directory where the JSON files will be saved. Default is ./reports.
 
 2. **fileName:** The base name for the JSON files. A timestamp will be appended to the filename. Default is test-results-{timestamp}.
-   API
-3. **reporter.reportTestResults(results, config) results (Object):** The test results object provided by Cypress.
-4. **config (Object, optional):** An optional configuration object.
-5. **reportDir (String):** The directory where the JSON files will be saved.
-6. **fileName (String):** The base name for the JSON files.
-   jsonCombiner.combineJsonFiles(inputDir, outputFilePath)
-7. **inputDir (String):** The directory containing the JSON files to be combined.
-8. **outputFilePath (String):** The file path where the combined JSON data will be written.
+
+### API
+
+1. **reporter.reportTestResults(results, config) results (Object):** The test results object provided by Cypress.
+2. **config (Object, optional):** An optional configuration object.
+3. **reportDir (String):** The directory where the JSON files will be saved.
+4. **fileName (String):** The base name for the JSON files.
+
+### jsonCombiner.combineJsonFiles(inputDir, outputFilePath)
+
+1. **inputDir (String):** The directory containing the JSON files to be combined.
+2. **outputFilePath (String):** The file path where the combined JSON data will be written.
 
 ## Contributing
 
